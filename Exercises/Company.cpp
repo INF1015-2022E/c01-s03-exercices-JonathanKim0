@@ -21,6 +21,23 @@ using namespace iter;
 
 // TODO: Les définitions.
 
+Company::Company(){
+	cout << "Company()" << endl;
+}
+
+Company::~Company() {
+	cout << "~Company()" << endl;
+}
+
+Company::Company(const string& name, const string& presidentName, double presidentSalary = 0.0) 
+	:name_(name)
+	president_(presidentName, presidentSalary){
+	cout << "Company(const string, const string&, double)" << endl;
+}
+
+
+
+
 void Company::print() const {
 	cout << "Name: " << name_ << "\n"
 	     << "President: " << president_.getName() << "\n"
